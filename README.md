@@ -1,6 +1,7 @@
 # Learning-based Sampling for Natural Image Matting
 
-This project tries to reimplement the CVPR2019 paper **Learning-based Sampling for Natural Image Matting** by Tang et al.
+This project tries to reimplement the CVPR2019 paper _Learning-based Sampling for Natural Image Matting_ by Tang et al.
+The original paper can be found [here](http://yaksoy.github.io/samplenet/).
 
 ## Requirements
 
@@ -56,7 +57,7 @@ Currently `train.py` can only train the alpha matting module. You need to obtain
 * Augmentation strategy are mostly the same as the original paper. We use larger dilation size during matting module training.
 * Both BG and FG sampling module are loaded with pretrained DeepFillv1 weights provided [here](https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting) then trained on DIM dataset for 40 epochs.
 * The matting module are trained on DIM dataset for 80 epochs.
-    * The ImageNet pretrained Resnet-50 weight also can be found [here](https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting)
+    * The ImageNet pretrained Resnet-50 weight also can be found [here](https://github.com/nbei/Deep-Flow-Guided-Video-Inpainting).
     * Learning rate is constantly 1e-5 with Adam optimizer. Weight decay is 1e-4.
     * Input shape is 640x640, batch size is 32, we **DID NOT USE SYNCBN**.
     * Both BG and FG sampling module is **FREEZED** during training.
